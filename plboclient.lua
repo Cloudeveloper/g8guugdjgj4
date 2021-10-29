@@ -17,30 +17,21 @@ local page = venyx:addPage("Misc", 5012544693)
 local section1 = page:addSection("Section 1")
 local section2 = page:addSection("Section 2")
 
-section1:addSlider("Walkspeed", 16, 16, 200, function()
-
+section1:addSlider("WalkSpeed", 16, 16, 200, function()
+player.Character.Humanoid.WalkSpeed = value
+end)
+section1:addSlider("JumpPower", 16, 16, 200, function()
+player.Character.Humanoid.JumpPower = value
 end)
 
-section2:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
-	print("Activated Keybind")
-	venyx:toggle()
-end, function()
-	print("Changed Keybind")
+section2:addButton("Turn Invisible", function()
+loadstring(game:HttpGet(""))
+TurnInvisible()
 end)
-section2:addColorPicker("ColorPicker", Color3.fromRGB(50, 50, 50))
-section2:addColorPicker("ColorPicker2")
-section2:addSlider("Slider", 0, -100, 100, function(value)
-	print("Dragged", value)
-end)
-section2:addDropdown("Dropdown", {"Hello", "World", "Hello World", "Word", 1, 2, 3})
-section2:addDropdown("Dropdown", {"Hello", "World", "Hello World", "Word", 1, 2, 3}, function(text)
-	print("Selected", text)
-end)
-section2:addButton("Button")
 
 -- second page
 local theme = venyx:addPage("Settings", 5012544693)
-local colors = theme:addSection("Colors")
+local colors = theme:addSection("Colours")
 local other = theme:addSection("Other")
 
 for theme, color in pairs(themes) do
@@ -48,6 +39,11 @@ for theme, color in pairs(themes) do
 		venyx:setTheme(theme, color3)
 	end)
 end
+
+section2:addKeybind("Toggle Keybind", Enum.KeyCode.Rshift, function()
+	venyx:toggle()
+end, function()
+end)
 
 -- load
 venyx:SelectPage(venyx.pages[1], true)
