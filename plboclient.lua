@@ -25,8 +25,16 @@ player.Character.Humanoid.JumpPower = value
 end)
 
 section2:addButton("Turn Invisible", function()
-loadstring(game:HttpGet(""))
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/invlocals"))
 TurnInvisible()
+end)
+
+section2:addButton("Turn Visible", function()
+TurnVisible()
+end)
+
+section2:addButton("Grab Tool", function()
+loadstring(game:HttpGet(""))
 end)
 
 -- second page
