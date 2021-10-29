@@ -34,7 +34,7 @@ TurnVisible()
 end)
 
 section2:addButton("Grab Tool", function()
-loadstring(game:HttpGet(""))
+loadstring(game:HttpGet("https://pastebin.com/raw/VHmT7WK4"))
 end)
 
 -- second page
