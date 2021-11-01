@@ -25,7 +25,7 @@ player.Character.Humanoid.JumpPower = value
 end)
 
 section2:addButton("Turn Invisible", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/invlocals.lua"))
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/invlocals.lua", true))()
 TurnInvisible()
 end)
 
@@ -34,7 +34,7 @@ TurnVisible()
 end)
 
 section2:addButton("Grab Tool", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/VHmT7WK4"))
+loadstring(game:HttpGet("https://pastebin.com/raw/VHmT7WK4", true))()
 end)
 
 -- second page
@@ -48,7 +48,7 @@ for theme, color in pairs(themes) do
 	end)
 end
 
-section2:addKeybind("Toggle Keybind", Enum.KeyCode.Rshift, function()
+section2:addKeybind("Toggle Keybind", Enum.KeyCode.shift, function()
 	venyx:toggle()
 end, function()
 end)
