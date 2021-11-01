@@ -1,5 +1,5 @@
 -- init
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/lib"))() 
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/lib.lua"))() 
 local venyx = library.new("Pablo Client", 5013109572)
 
 -- themes
@@ -25,7 +25,7 @@ player.Character.Humanoid.JumpPower = value
 end)
 
 section2:addButton("Turn Invisible", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/invlocals"))
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/invlocals.lua"))
 TurnInvisible()
 end)
 
