@@ -48,7 +48,7 @@ for theme, color in pairs(themes) do
 	end)
 end
 
-section2:addKeybind("Toggle Keybind", Enum.KeyCode.shift, function()
+other:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
 	venyx:toggle()
 end, function()
 end)
