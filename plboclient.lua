@@ -34,7 +34,7 @@ TurnVisible()
 end)
 
 section2:addButton("Grab Tool", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/VHmT7WK4", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/grabtool.lua", true))()
 end)
 
 -- second page
