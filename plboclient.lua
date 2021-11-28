@@ -17,11 +17,11 @@ local page = venyx:addPage("Misc", 5012544693)
 local section1 = page:addSection("Section 1")
 local section2 = page:addSection("Section 2")
 
-section1:addSlider("WalkSpeed", 16, 16, 200, function()
+section1:addSlider("WalkSpeed", 16, 16, 200, function(value)
 print(value)
 player.Character.Humanoid.WalkSpeed = value
 end)
-section1:addSlider("JumpPower", 50, 50, 200, function()
+section1:addSlider("JumpPower", 50, 50, 200, function(value)
 print(value)
 player.Character.Humanoid.JumpPower = value
 end)
