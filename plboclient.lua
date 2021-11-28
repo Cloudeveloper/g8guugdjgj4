@@ -1,6 +1,7 @@
 -- init
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/lib.lua"))() 
 local venyx = library.new("Pablo Client", 5013109572)
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid
 
 -- themes
 local themes = {
@@ -19,11 +20,11 @@ local section2 = page:addSection("Section 2")
 
 section1:addSlider("WalkSpeed", 16, 16, 200, function(value)
 print(value)
-player.Character.Humanoid.WalkSpeed = value
+Humanoid.WalkSpeed = value
 end)
 section1:addSlider("JumpPower", 50, 50, 200, function(value)
 print(value)
-player.Character.Humanoid.JumpPower = value
+Humanoid.JumpPower = value
 end)
 
 section2:addButton("Turn Invisible", function()
