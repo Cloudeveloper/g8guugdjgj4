@@ -17,6 +17,7 @@ local themes = {
 local page = venyx:addPage("Misc", 5012544693)
 local section1 = page:addSection("Section 1")
 local section2 = page:addSection("Section 2")
+local section3 = page:addSection("Tools")
 
 section1:addSlider("WalkSpeed", 16, 16, 200, function(value)
 print(value)
@@ -38,6 +39,17 @@ end)
 
 section2:addButton("Grab Tool", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/grabtool.lua", true))()
+end)
+
+section3:addButton("Fire All Click Detectors", function()
+if fireclickdetector then
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("ClickDetector") then
+				fireclickdetector(v)
+			end
+		end
+	else
+end
 end)
 
 -- second page
