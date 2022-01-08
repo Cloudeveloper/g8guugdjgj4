@@ -67,17 +67,6 @@ if fireproximityprompt then
 end
 end)
 
-tools:addButton("Fire All Proximity Prompts", function()
-if fireproximityprompt then
-		for i,v in pairs(workspace:GetDescendants()) do
-			if v:IsA("ProximityPrompt") then
-				fireproximityprompt(v)
-			end
-		end
-	else
-end
-end)
-
 -- third page
 local theme = venyx:addPage("Settings", 5012544372)
 local colors = theme:addSection("Colours")
