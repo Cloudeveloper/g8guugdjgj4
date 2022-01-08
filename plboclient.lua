@@ -15,7 +15,7 @@ local themes = {
 
 -- first page
 local page = venyx:addPage("Misc", 5012544693)
-local section1 = page:addSection("Section 1")
+local section1 = page:addSection("Player")
 local section2 = page:addSection("Section 2")
 local section3 = page:addSection("Tools")
 
@@ -28,12 +28,12 @@ print(value)
 Humanoid.JumpPower = value
 end)
 
-section2:addButton("Turn Invisible", function()
+section1:addButton("Turn Invisible", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/invlocals.lua", true))()
 TurnInvisible()
 end)
 
-section2:addButton("Turn Visible", function()
+section1:addButton("Turn Visible", function()
 TurnVisible()
 end)
 
@@ -46,6 +46,28 @@ if fireclickdetector then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ClickDetector") then
 				fireclickdetector(v)
+			end
+		end
+	else
+end
+end)
+
+section3:addButton("Fire All Proximity Prompts", function()
+if fireproximityprompt then
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("ProximityPrompt") then
+				fireproximityprompt(v)
+			end
+		end
+	else
+end
+end)
+
+section3:addButton("Fire All Proximity Prompts", function()
+if fireproximityprompt then
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("ProximityPrompt") then
+				fireproximityprompt(v)
 			end
 		end
 	else
@@ -68,5 +90,8 @@ other:addKeybind("Toggle Keybind", Enum.KeyCode.RightShift, function()
 end, function()
 end)
 
+other:addButton("Delete Gui", function()
+game.CoreGui["Pablo Client"]:Destroy()	
+end)
 -- load
 venyx:SelectPage(venyx.pages[1], true)
