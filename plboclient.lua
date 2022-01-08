@@ -41,7 +41,12 @@ section2:addButton("Grab Tool", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/grabtool.lua", true))()
 end)
 
-section3:addButton("Fire All Click Detectors", function()
+
+-- second page
+local theme = venyx:addPage("Misc", 5012543246)
+local Fire = theme:addSection("Colours")
+
+Fire:addButton("Fire All Click Detectors", function()
 if fireclickdetector then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ClickDetector") then
@@ -52,7 +57,7 @@ if fireclickdetector then
 end
 end)
 
-section3:addButton("Fire All Proximity Prompts", function()
+Fire:addButton("Fire All Proximity Prompts", function()
 if fireproximityprompt then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ProximityPrompt") then
@@ -63,7 +68,7 @@ if fireproximityprompt then
 end
 end)
 
-section3:addButton("Fire All Proximity Prompts", function()
+Fire:addButton("Fire All Proximity Prompts", function()
 if fireproximityprompt then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ProximityPrompt") then
@@ -73,14 +78,9 @@ if fireproximityprompt then
 	else
 end
 end)
-
--- second page
-local theme = venyx:addPage("Settings", 5012543246)
-local colors = theme:addSection("Colours")
-local other = theme:addSection("Other")
 
 -- third page
-local theme = venyx:addPage("Settings", 5012544386)
+local theme = venyx:addPage("Settings", 5012544372)
 local colors = theme:addSection("Colours")
 local other = theme:addSection("Other")
 
