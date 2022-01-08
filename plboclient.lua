@@ -14,7 +14,7 @@ local themes = {
 }
 
 -- first page
-local page = venyx:addPage("Misc", 5012544693)
+local page = venyx:addPage("Local", 5012544693)
 local section1 = page:addSection("Player")
 local section2 = page:addSection("Section 2")
 
