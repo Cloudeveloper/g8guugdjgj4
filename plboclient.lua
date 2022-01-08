@@ -17,7 +17,6 @@ local themes = {
 local page = venyx:addPage("Misc", 5012544693)
 local section1 = page:addSection("Player")
 local section2 = page:addSection("Section 2")
-local section3 = page:addSection("Tools")
 
 section1:addSlider("WalkSpeed", 16, 16, 200, function(value)
 print(value)
@@ -44,7 +43,7 @@ end)
 
 -- second page
 local theme = venyx:addPage("Misc", 5012543246)
-local Fire = theme:addSection("Colours")
+local Fire = theme:addSection("Tools")
 
 Fire:addButton("Fire All Click Detectors", function()
 if fireclickdetector then
