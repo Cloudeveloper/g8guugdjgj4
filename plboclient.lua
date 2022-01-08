@@ -43,9 +43,9 @@ end)
 
 -- second page
 local theme = venyx:addPage("Misc", 5012543246)
-local Fire = theme:addSection("Tools")
+local tools = theme:addSection("Tools")
 
-Fire:addButton("Fire All Click Detectors", function()
+tools:addButton("Fire All Click Detectors", function()
 if fireclickdetector then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ClickDetector") then
@@ -56,7 +56,7 @@ if fireclickdetector then
 end
 end)
 
-Fire:addButton("Fire All Proximity Prompts", function()
+tools:addButton("Fire All Proximity Prompts", function()
 if fireproximityprompt then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ProximityPrompt") then
@@ -67,7 +67,7 @@ if fireproximityprompt then
 end
 end)
 
-Fire:addButton("Fire All Proximity Prompts", function()
+tools:addButton("Fire All Proximity Prompts", function()
 if fireproximityprompt then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ProximityPrompt") then
