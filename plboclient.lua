@@ -75,7 +75,12 @@ end
 end)
 
 -- second page
-local theme = venyx:addPage("Settings", 5012544693)
+local theme = venyx:addPage("Settings", 5012543246)
+local colors = theme:addSection("Colours")
+local other = theme:addSection("Other")
+
+-- third page
+local theme = venyx:addPage("Settings", 5012544386)
 local colors = theme:addSection("Colours")
 local other = theme:addSection("Other")
 
