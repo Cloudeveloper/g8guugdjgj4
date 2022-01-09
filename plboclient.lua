@@ -111,7 +111,7 @@ gfx:addbutton("Fps Boost", function()
 end)
 
 tools:addButton("wait", function()
-
+print("yes")
 end)
 
 -- third page
