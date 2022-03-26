@@ -71,6 +71,8 @@ tools:addButton("Get CFrame", function()
 print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
 end)
 
+
+-- third page
 local FX = venyx:addPage("Composition", 5012544092)
 local gfx = theme:addSection("Composition Effects")
 local gfxDel = theme:addSection("Remove Composition Effects")
@@ -126,12 +128,11 @@ end)
 
 gfxDel:addButton("Remove Compositions", function()
 GFXS = { 
-	"Atmo_Dev",
-	"GodRays_Dev",
-	"DoF_Dev",
-  "Bloom_Dev"
+"Atmo_Dev",
+"GodRays_Dev",
+"DoF_Dev",
+"Bloom_Dev"
 }
-
 function del()
 	for i = 1, #GFXS do
 		local GFX = game.Workspace:FindFirstChild((GFXS[i]), true)
@@ -140,13 +141,11 @@ function del()
 		end
 	end
 end
-
-
 del()
 end)
 
 
--- third page
+-- fourth page
 local theme = venyx:addPage("Settings", 5012544372)
 local colors = theme:addSection("Colours")
 local other = theme:addSection("Other")
