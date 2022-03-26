@@ -71,7 +71,7 @@ tools:addButton("Get CFrame", function()
 print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
 end)
 
-local FX = venyx:addPage("Composition FX", 5012544092)
+local FX = venyx:addPage("Composition", 5012544092)
 local gfx = theme:addSection("Composition Effects")
 local gfxDel = theme:addSection("Remove Composition Effects")
 
