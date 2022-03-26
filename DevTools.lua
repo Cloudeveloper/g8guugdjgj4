@@ -2,11 +2,13 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/lib.lua"))() 
 local venyx = library.new("Developer Tools", 5013109572)
 local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid
-function sound()
-	
-click:play()
-end
-
+-- click sound
+clicke = Instance.new("Sound")
+clicke.Name = "click"
+clicke.Parent = game.Workspace
+clicke.SoundId = "rbxassetid://9113869111"
+clicke.Volume = 0.5
+local Click = game.Workspace.click
 -- themes
 local themes = {
 	Background = Color3.fromRGB(24, 24, 24),
@@ -23,26 +25,31 @@ local section1 = page:addSection("Player")
 local section2 = page:addSection("Section 2")
 
 section1:addSlider("WalkSpeed", 16, 16, 200, function(value)
+Click:Play()
 print(value)
 Humanoid.WalkSpeed = value
 end)
 section1:addSlider("JumpPower", 50, 50, 200, function(value)
+Click:Play()
 print(value)
 Humanoid.JumpPower = value
 end)
 
 section1:addButton("Turn Invisible", function()
+Click:Play()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/invlocals.lua", true))()
 TurnInvisible()
 venyx:Notify("DevTools", "You are now Invisible")
 end)
 
 section1:addButton("Turn Visible", function()
+Click:Play()
 TurnVisible()
 venyx:Notify("DevTools", "You are now Visible")
 end)
 
 section2:addButton("Grab Tool", function()
+Click:Play()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cloudeveloper/g8guugdjgj4/main/grabtool.lua", true))()
 venyx:Notify("DevTools", "Grab Tool Given")
 end)
@@ -53,6 +60,7 @@ local theme = venyx:addPage("Misc", 5012543246)
 local tools = theme:addSection("Tools")
 
 tools:addButton("Fire All Click Detectors", function()
+Click:Play()
 if fireclickdetector then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ClickDetector") then
@@ -65,6 +73,7 @@ venyx:Notify("DevTools", "Fired All Click Detectors")
 end)
 
 tools:addButton("Fire All Proximity Prompts", function()
+Click:Play()
 if fireproximityprompt then
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v:IsA("ProximityPrompt") then
@@ -77,6 +86,7 @@ venyx:Notify("DevTools", "Fired All Proximity Prompts")
 end)
 
 tools:addButton("Get CFrame", function()
+Click:Play()
 print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
 venyx:Notify("DevTools", "Press F9 To Find CFrame")
 end)
@@ -88,6 +98,7 @@ local gfx = FX:addSection("Composition Effects")
 local gfxDel = FX:addSection("Remove Composition Effects")
 
 gfx:addButton("Depth Of Field Effect", function()
+Click:Play()
   DoF = Instance.new("DepthOfFieldEffect")
   DoF.Name = "DoF_Dev"
   DoF.Enabled = true
@@ -100,6 +111,7 @@ venyx:Notify("DevTools", "Added Depth Of Field Effect")
 end)
 
 gfx:addButton("GodRays Effect", function()
+Click:Play()
   GR = Instance.new("SunRaysEffect")
   GR.Name = "GodRays_Dev"
   GR.Enabled = true
@@ -110,6 +122,7 @@ venyx:Notify("DevTools", "Added GodRays Effect")
 end)
 
 gfx:addButton("Realistic Water", function()
+Click:Play()
   local Ter = game.Workspace.Terrain
   Ter.WaterColor = Color3.new(0.247059, 0.372549, 0.372549)
   Ter.WaterReflectance = 1
@@ -118,6 +131,7 @@ venyx:Notify("DevTools", "Added Realistic Water")
 end)
 
 gfx:addButton("Atmosphere Effect", function()
+Click:Play()
   Atmo = Instance.new("Atmosphere")
   Atmo.Name = "Atmo_Dev"
   Atmo.Parent = game.Lighting
@@ -131,6 +145,7 @@ venyx:Notify("DevTools", "Added Atmosphere Effect")
 end)
 
 gfx:addButton("Bloom Effect", function()
+Click:Play()
   Bloom = Instance.new("BloomEffect")
   Bloom.Name = "Bloom_Dev"
   Bloom.Enabled = true
@@ -142,6 +157,7 @@ venyx:Notify("DevTools", "Added Bloom Effect")
 end)
 
 gfxDel:addButton("Remove Compositions", function()
+Click:Play()
 game.Lighting.Bloom_Dev:Destroy()
 game.Lighting.DoF_Dev:Destroy()
 game.Lighting.Atmo_Dev:Destroy()
@@ -162,12 +178,14 @@ for theme, color in pairs(themes) do
 end
 
 other:addKeybind("Toggle Keybind", Enum.KeyCode.RightAlt, function()
+Click:Play()
 	venyx:toggle()
 end, function()
 venyx:Notify("DevTools", "Keybind Changed")
 end)
 
 other:addButton("Delete Gui", function()
+Click:Play()
 game.CoreGui["Developer Tools"]:Destroy()	
 end)
 -- load
