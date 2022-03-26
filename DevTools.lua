@@ -90,7 +90,7 @@ end)
 
 gfx:addButton("Godrays Effect", function()
   GR = Instance.new("SunRaysEffect")
-  GR.Name = GodRays_Dev
+  GR.Name = "GodRays_Dev"
   GR.Enabled = true
   GR.Parent = game.Lighting
   GR.Intensity = 0.1
