@@ -74,8 +74,8 @@ end)
 
 -- third page
 local FX = venyx:addPage("Composition", 5012544092)
-local gfx = theme:addSection("Composition Effects")
-local gfxDel = theme:addSection("Remove Composition Effects")
+local gfx = FX:addSection("Composition Effects")
+local gfxDel = FX:addSection("Remove Composition Effects")
 
 gfx:addButton("Depth Of Field Effect", function()
   DoF = Instance.new("DepthOfFieldEffect")
@@ -127,21 +127,10 @@ gfx:addButton("Bloom Effect", function()
 end)
 
 gfxDel:addButton("Remove Compositions", function()
-GFXS = { 
-"Atmo_Dev",
-"GodRays_Dev",
-"DoF_Dev",
-"Bloom_Dev"
-}
-function del()
-	for i = 1, #GFXS do
-		local GFX = game.Workspace:FindFirstChild((GFXS[i]), true)
-	if GFX then
-		GFX:Remove()
-		end
-	end
-end
-del()
+game.Lighting.Bloom_Dev:Destroy()
+game.Lighting.DoF_Dev:Destroy()
+game.Lighting.Atmo_Dev:Destroy()
+game.Lighting.Bloom_Dev:Destroy()
 end)
 
 
