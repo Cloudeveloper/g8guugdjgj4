@@ -110,8 +110,8 @@ gfx:addButton("Fps Boost", function()
 	end)	
 end)
 
-gfx:addButton("wait", function()
-print("yes")
+gfx:addButton("Better Textures", function()
+sethiddenproperty(game:GetService("MaterialService"), "Use2022Materials", true)
 end)
 
 -- third page
